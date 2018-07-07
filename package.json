@@ -1,0 +1,27 @@
+{
+  "name": "jalangi2-typescript",
+  "version": "0.0.1",
+  "description": "TypeScript declaration file and analysis stub for Jalangi2, a dynamic analysis framework for JavaScript.",
+  "main": "",
+  "scripts": {
+    "clean": "rm -rf build",
+    "compile": "npm run clean && ./node_modules/.bin/tsc -p .",
+    "test": "./node_modules/.bin/mocha --colors --require ts-node/register test/**",
+    "lint": "./node_modules/.bin/tslint --format stylish --force --project .",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run lint"
+  },
+  "author": "Simon Gregersen",
+  "license": "Apache-2.0",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/mocha": "^5.2.0",
+    "@types/node": "^10.3.0",
+    "jalangi2": "git+ssh://git@github.com:Samsung/jalangi2.git",
+    "mocha": "5.2.0",
+    "ts-mocha": "^1.2.0",
+    "typescript": "^2.9.2",
+    "tslint": "^5.10.0"
+  }
+}
